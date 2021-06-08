@@ -1,45 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
-$font-1: 'Nunito', sans-serif;
-$font-2: 'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+$font-1: "Nunito", sans-serif;
+$font-2: "Open Sans", sans-serif;
 
-$color-1: #BC2C33; // Primary  Orange
-$color-2: #EDCC5D; // Scondary purple
-$color-3: #60965C;
+$color-1: #bc2c33; // Primary  Orange
+$color-2: #edcc5d; // Scondary purple
+$color-3: #60965c;
 
 $white: #fff;
 $black: #060001;
 
 $border: solid 2px $black;
-$borderRadius: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+$borderRadius: 0;
+$shadow: 8px 8px 0px 1px rgba(0, 0, 0, 0.75);
 
 $minHeight: 95vh;
 
-button{
+button {
+  cursor: pointer;
   margin: 0 20px;
-  height: 40px;
-  width: 100px;
+  // height: 40px;
+  // width: 100px;
+  padding: 0.3rem 1.2rem;
+  background: $white;
+  border: $border;
+
   font-size: 1rem;
   font-weight: 700;
   font-family: $font-2;
-  background: $white;
-  border: $border;
-  
+  text-decoration: none;
+
+  &:hover {
+    background: $color-3;
+    color: $white;
+    box-shadow: $shadow;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  color: $color-1;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-2;
+  }
+
+  &:visited {
+    color: $color-2;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 1rem auto;
+  // max-width: 1200px; //// Bizarre
+  font-family: $font-1;
+  color: $black;
 }
 
 @mixin verticalCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    margin: 1rem auto;
-    max-width: 1200px;
-    font-family: $font-1;
-    color: $black;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
