@@ -1,0 +1,57 @@
+.layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3";
+    .header{
+         grid-area: 1;
+         
+         max-width: 1200px;
+         margin-bottom:7rem;
+       
+         
+        .nav{
+            box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+           
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+
+            position: fixed;
+            z-index: 1;            
+            
+            
+            
+            .contact{
+                @include verticalCenter;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .children{
+        
+       grid-area: 2;
+       padding: 1rem 0;
+       width: 100%;
+         min-height: 95vh;
+        //  padding-top: 100px;
+    }
+
+    .footer{
+        grid-area: 3;
+       
+        background: $color-3;
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+       
+       
+       
+       
+    }
+}
