@@ -25,6 +25,9 @@
       z-index: 1;
 
       .contact {
+        span {
+          visibility: hidden;
+        }
         @include verticalCenter;
         font-weight: 700;
       }
@@ -47,12 +50,19 @@
 
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-rows: 1fr auto auto;
     gap: 1rem 0;
     grid-template-areas:
       "H C"
       "S S"
       "I I";
+
+    .horaire {
+      grid-area: H;
+      width: max-content;
+      padding-left: 1rem;
+      margin-right: 100px;
+    }
 
     .contact {
       grid-area: C;
@@ -102,12 +112,6 @@
       }
     }
 
-    .horaire {
-      grid-area: H;
-
-      padding-left: 1rem;
-    }
-
     .web-Identity {
       grid-area: I;
       width: fit-content;
@@ -129,6 +133,20 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: "H C S I";
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .layout {
+    .header {
+      .nav {
+        .contact {
+          span {
+            visibility: visible;
+          }
+        }
+      }
     }
   }
 }
