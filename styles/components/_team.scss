@@ -1,0 +1,47 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h2 {
+    padding-bottom: 2rem;
+  }
+
+  .container-deco {
+    display: flex;
+    align-items: center;
+    .line {
+      background: $color-2;
+      height: 1px;
+      width: 100px;
+      margin: 0 3rem;
+    }
+  }
+
+  .container-team {
+    .container-item {
+      display: flex;
+      flex-direction: column;
+
+      width: 280px;
+      height: 372px;
+      margin-top: 2rem;
+      box-shadow: $shadow;
+
+      .imgi {
+        width: 100%;
+      }
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        h5 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

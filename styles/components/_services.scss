@@ -1,0 +1,34 @@
+.services {
+  padding-left: 1rem;
+
+  h2 {
+  }
+
+  .container-service {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .container-item {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      width: 350px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h3 {
+        margin-top: 1rem;
+      }
+
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
