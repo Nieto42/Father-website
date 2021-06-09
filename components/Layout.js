@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function Layout({ children, page }) {
   return (
@@ -96,6 +97,7 @@ export default function Layout({ children, page }) {
             </ul>
           </div>
         </div>
+
         <div className="horaire">
           <h3>Les horaires</h3>
           <div className="list-horaire">
@@ -112,7 +114,20 @@ export default function Layout({ children, page }) {
         </div>
 
         <div className="contact">
-          <span>0694 00 00 93</span>
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <CopyToClipboard text="0783098593">
+                <span>0783098593</span>
+              </CopyToClipboard>
+            </li>
+            <li>
+              <CopyToClipboard text="neto1@hotmail.fr">
+                <span>neto1@hotmail.fr</span>
+              </CopyToClipboard>
+            </li>
+            <li>7 allée des allibibi, Saint Laurent Du maroni</li>
+          </ul>
           <button>Contactez-nous 📞</button>
         </div>
       </footer>

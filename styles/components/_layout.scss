@@ -41,15 +41,78 @@
 
   .footer {
     grid-area: 3;
-
+    padding: 1rem 0;
     background: $color-3;
     color: $white;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1fr 1fr auto;
+    gap: 1rem 0;
+    grid-template-areas:
+      "H C"
+      "S S"
+      "I I";
+
+    .contact {
+      grid-area: C;
+      padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 30vh;
+      margin-right: auto;
+
+      h3 {
+        border-bottom: solid 1px;
+        width: 5rem;
+      }
+      ul {
+        margin-top: 0.3rem;
+      }
+      li {
+        margin: 0.1rem;
+      }
+    }
+
+    .services {
+      grid-area: S;
+      padding-left: 1rem;
+      h3 {
+        border-bottom: 1px solid;
+        width: 120px;
+        margin-bottom: 0.4rem;
+      }
+      .list-services {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2px;
+        ul {
+          padding-left: 0.5rem;
+
+          li {
+            h6 {
+              font-size: 16px;
+              font-weight: 400;
+            }
+          }
+        }
+        ul:nth-child(2) {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    .horaire {
+      grid-area: H;
+
+      padding-left: 1rem;
+    }
 
     .web-Identity {
+      grid-area: I;
+      width: fit-content;
       padding: 0 1rem;
+      height: 10vh;
       .faya {
         font-size: 1rem;
         border-top: 1px solid $color-2;
@@ -57,23 +120,15 @@
         margin-top: 4px;
       }
     }
-
-    .services {
-      .list-services {
-        display: flex;
-        flex-direction: row;
-        margin-top: 2px;
-        ul {
-          padding: 0 5px;
-        }
-      }
-    }
-
-    .horaire {
-    }
-
-    .contact {
-      @include verticalCenter;
+  }
+}
+///Desktop
+@media (min-width: 935px) {
+  .layout {
+    .footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "H C S I";
     }
   }
 }
