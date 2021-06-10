@@ -1,7 +1,8 @@
 .services {
   padding-left: 1rem;
-
+  text-align: center;
   h2 {
+    margin: 1rem 0;
   }
 
   .container-service {
@@ -13,8 +14,8 @@
     .container-item {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      width: 350px;
-      height: 180px;
+      width: 300px;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -28,6 +29,19 @@
 
       p {
         margin-top: 1rem;
+      }
+    }
+  }
+}
+///Desktop
+@media (min-width: 750px) {
+  .services {
+    .container-service {
+      display: flex;
+      flex-direction: row;
+
+      .container-item {
+        margin: 0 1rem;
       }
     }
   }

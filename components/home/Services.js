@@ -7,7 +7,7 @@ export default function Services() {
       <div className="container-service">
         <div className="container-item">
           <Image
-            src="/renovation.svg"
+            src="/home/renovation.svg"
             alt="illustration renovation batiment guyanais"
             width="56"
             height="56"
@@ -20,28 +20,32 @@ export default function Services() {
         </div>
         <div className="container-item">
           <Image
-            src="/renovation.svg"
+            src="/home/construction-worker.svg"
             alt="illustration renovation batiment guyanais"
             width="56"
             height="56"
             quality={100}
           ></Image>
-          <h3>Rénovation</h3>
+          <h3>Construction durable</h3>
           <p>
-            Nous rénovants salon, chambre, salle de bain, garage et isolation
+            Vous voulez construire une terrasse, une maison ou simplement mettre
+            un grillage à votre maison. Nos artisans de SLM s'en chargent de
+            tout.
           </p>
         </div>
         <div className="container-item">
           <Image
-            src="/renovation.svg"
-            alt="illustration renovation batiment guyanais"
+            src="/home/Illustration_demolition_du_mur.svg"
+            alt="illustration d'une démolition d'un mur"
             width="56"
             height="56"
             quality={100}
           ></Image>
-          <h3>Rénovation</h3>
+          <h3>Démolition</h3>
           <p>
-            Nous rénovants salon, chambre, salle de bain, garage et isolation
+            Vous voulez faire une pièce unique qui regroupe le salon et cuisine
+            ? Cependant, vous avez un mur qui les sépare ? Nos artisans guyanais
+            vous aideront dans vos travaux.
           </p>
         </div>
       </div>

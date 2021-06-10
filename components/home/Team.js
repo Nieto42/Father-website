@@ -7,7 +7,7 @@ export default function Team() {
       <div className="container-deco">
         <div className="line"></div>
         <Image
-          src="/Logo équipe artisan guyanais.svg"
+          src="/home/Logo équipe artisan guyanais.svg"
           alt="illustration d'un visage souriant des couleur de la guyane"
           width="56"
           height="56"
@@ -19,17 +19,49 @@ export default function Team() {
         <div className="container-item">
           <div className="imgi">
             <Image
-              src="/name.jpeg"
+              src="/photo/name.jpeg"
               alt="Photo d'un artisan guyanais"
-              width="280"
-              height="200"
+              width="300"
+              height="300"
               quality={100}
               objectFit="cover"
             ></Image>
           </div>
           <div className="description">
-            <h5>Name</h5>
-            <p>Full Stack</p>
+            <h5>Freitas Soares</h5>
+            <p>Electricien</p>
+          </div>
+        </div>
+        <div className="container-item">
+          <div className="imgi">
+            <Image
+              src="/photo/name.jpeg"
+              alt="Photo d'un artisan guyanais"
+              width="300"
+              height="300"
+              quality={100}
+              objectFit="cover"
+            ></Image>
+          </div>
+          <div className="description">
+            <h5>Siba</h5>
+            <p>Electricien</p>
+          </div>
+        </div>
+        <div className="container-item">
+          <div className="imgi">
+            <Image
+              src="/photo/name.jpeg"
+              alt="Photo d'un artisan guyanais"
+              width="300"
+              height="300"
+              quality={100}
+              objectFit="cover"
+            ></Image>
+          </div>
+          <div className="description">
+            <h5>Louis</h5>
+            <p>Electricien</p>
           </div>
         </div>
       </div>

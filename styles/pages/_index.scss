@@ -52,5 +52,28 @@
 }
 
 ///Desktop
-@media (min-width: 935px) {
+@media (min-width: 686px) {
+  .home {
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "H I"
+        "C I";
+
+      margin-bottom: 1rem;
+      h1 {
+        grid-area: H;
+      }
+      .img {
+        grid-area: I;
+      }
+      .call-action {
+        grid-area: C;
+        .btn {
+        }
+      }
+    }
+  }
 }
