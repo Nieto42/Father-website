@@ -3,8 +3,8 @@ import Image from "next/image";
 import "moment/locale/fr";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectCoverflow } from "swiper/core";
-SwiperCore.use([EffectCoverflow]);
+import SwiperCore, { EffectCoverflow, Autoplay } from "swiper/core";
+SwiperCore.use([EffectCoverflow, Autoplay]);
 
 export default function Instagram({ result }) {
   // const formatDate = (text) => {
@@ -28,6 +28,10 @@ export default function Instagram({ result }) {
       <h2>Nos dernière réalisation sur Saint Laurent Du Maroni</h2>
       <Swiper
         slidesPerView={"auto"}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
         centeredSlides={true}
         effect={"coverflow"}
         coverflowEffect={{
