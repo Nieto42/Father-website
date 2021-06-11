@@ -68,13 +68,24 @@ export default function Instagram({ result }) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <Image
-                  alt="photo ou video qui provient du compte instagram"
-                  src={post.media_url}
-                  width="500"
-                  height="500"
-                  quality={100}
-                ></Image>
+                {post.media_type === "IMAGE" ? (
+                  <Image
+                    alt="photo ou video qui provient du compte instagram"
+                    src={post.media_url}
+                    width="700"
+                    height="700"
+                    quality={100}
+                  ></Image>
+                ) : (
+                  <video
+                    src={post.media_url}
+                    alt="video instagram contenu artisan de saint laurent du maroni"
+                    type="video/mp4"
+                    className="video"
+                    controls
+                    width="100%"
+                  ></video>
+                )}
               </a>
             </div>
             <div className="item-caption">{post.caption}</div>

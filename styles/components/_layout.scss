@@ -10,6 +10,10 @@
   .header {
     grid-area: 1;
     margin-bottom: 6rem;
+    button {
+      min-width: fit-content;
+      height: 50px;
+    }
 
     .nav {
       top: 0;
