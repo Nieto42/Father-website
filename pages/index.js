@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import Services from "../components/home/Services";
 import Team from "../components/home/Team";
-import Instagram from "../components/home/Instagram";
+import Instagram, { CarrocelContainer } from "../components/home/Instagram";
 
 export default function Home({ result }) {
   return (

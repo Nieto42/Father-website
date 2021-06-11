@@ -7,14 +7,14 @@
   }
 
   .container-insta {
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-250px * 7));
-      }
-    }
+    // @keyframes scroll {
+    //   0% {
+    //     transform: translateX(0);
+    //   }
+    //   100% {
+    //     transform: translateX(calc(-250px * 7));
+    //   }
+    // }
     .container-post {
       display: grid;
       grid-template-columns: 1fr;
@@ -26,8 +26,11 @@
         "4";
       border: $border;
       margin-top: 1.5rem;
-      margin-right: 1.5rem;
-      margin-left: 1.5rem;
+      // margin-right: 1.5rem;
+      // margin-left: 1.5rem;
+
+      width: 50%;
+      // height: fit-content;
 
       .item-date {
         grid-area: 1;

@@ -1,11 +1,11 @@
 import moment from "moment";
 import Image from "next/image";
 import "moment/locale/fr";
-// module.exports = {
-//   images: {
-//     domains: ["scontent-cdt1-1.cdninstagram.com"],
-//   },
-// };
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectCoverflow } from "swiper/core";
+SwiperCore.use([EffectCoverflow]);
+
 export default function Instagram({ result }) {
   // const formatDate = (text) => {
   //   const date = new Date(text).toString(); //Wed Aug 22 2018 20:49:08
@@ -26,9 +26,24 @@ export default function Instagram({ result }) {
   return (
     <div className="instagram">
       <h2>Nos dernière réalisation sur Saint Laurent Du Maroni</h2>
-      <ul className="container-insta">
+      <Swiper
+        slidesPerView={"auto"}
+        centeredSlides={true}
+        effect={"coverflow"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        className="container-insta"
+      >
         {result.data.map((post, index) => (
-          <li key={index} className="container-post">
+          <SwiperSlide key={index} className="container-post">
             <div className="item-date">
               <div className="img-date">
                 <Image
@@ -73,9 +88,9 @@ export default function Instagram({ result }) {
               ></Image>
               <p>{post.username}</p>
             </div>
-          </li>
+          </SwiperSlide>
         ))}
-      </ul>
+      </Swiper>
     </div>
   );
 }
