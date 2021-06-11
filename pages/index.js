@@ -43,7 +43,7 @@ export default function Home({ result }) {
 export async function getServerSideProps(context) {
   try {
     const data = await fetch(
-      `https://graph.instagram.com/me/media?fields=id,username,media_url,permalink,thumbail_url,caption,timestamp&access_token=IGQVJXZA0xxU0ZAURjlQUndpajdIX1lHd3VVREg2RjRjeEt5MlJaZAEwtYUpDajI3RmloNGlDMHhocjR3OFZAua2R1ZAk8tRmRxRmRtRC1sSndoZA2dvbWpkNlBsMV96RTI5V3FBS1I3TmptV3Q4YWhLYmhMWgZDZD`
+      `https://graph.instagram.com/me/media?fields=id,username,media_url,media_type,permalink,thumbail_url,caption,timestamp&access_token=IGQVJXZA0xxU0ZAURjlQUndpajdIX1lHd3VVREg2RjRjeEt5MlJaZAEwtYUpDajI3RmloNGlDMHhocjR3OFZAua2R1ZAk8tRmRxRmRtRC1sSndoZA2dvbWpkNlBsMV96RTI5V3FBS1I3TmptV3Q4YWhLYmhMWgZDZD`
     );
     const result = await data.json();
     console.log(result);

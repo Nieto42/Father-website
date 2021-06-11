@@ -1,19 +1,81 @@
+import moment from "moment";
+import Image from "next/image";
+import "moment/locale/fr";
+// module.exports = {
+//   images: {
+//     domains: ["scontent-cdt1-1.cdninstagram.com"],
+//   },
+// };
 export default function Instagram({ result }) {
-  //   console.log(result);
+  // const formatDate = (text) => {
+  //   const date = new Date(text).toString(); //Wed Aug 22 2018 20:49:08
+  //   const weekDay = /^\w+/.exec(date)[0];
+  //   const month = /\s\w+/.exec(date)[0].trim();
+  //   const day = /\s\d+/.exec(date)[0].trim();
+  //   const hour = /\d+:\d+/.exec(date)[0].trim();
+  //   const dateAsText = `${weekDay}, ${month} ${day} ${hour}`; // Create this  : Wed Aug 22 2018 20:49:08
+
+  //   return dateAsText;
+
+  // };
+
+  const formatDate = (text, format) => {
+    return moment(new Date(text)).format(format); // Biblitheque de Moment.js
+  };
+
   return (
     <div className="instagram">
       <h2>Nos dernière réalisation sur Saint Laurent Du Maroni</h2>
       <ul className="container-insta">
         {result.data.map((post, index) => (
           <li key={index} className="container-post">
-            <div className="item-date">{post.timestamp}</div>
-            <div className="item-img"></div>
-            <div className="item-caption"></div>
-            <div className="item-username"></div>
+            <div className="item-date">
+              <div className="img-date">
+                <Image
+                  src="/home/Icon_coeur_publication_instagram.svg"
+                  alt="illustration renovation batiment guyanais"
+                  width="32"
+                  height="32"
+                  quality={100}
+                ></Image>
+
+                <p className="item-day">
+                  {moment(new Date(post.timestamp)).format("ddd, MMM")}
+                </p>
+              </div>
+              <p className="item-hour">
+                {moment(new Date(post.timestamp)).format("H:mm")}
+              </p>
+            </div>
+            <div className="item-photo">
+              <a
+                href={post.permalink}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Image
+                  alt="photo ou video qui provient du compte instagram"
+                  src={post.media_url}
+                  width="500"
+                  height="500"
+                  quality={100}
+                ></Image>
+              </a>
+            </div>
+            <div className="item-caption">{post.caption}</div>
+            <div className="item-username">
+              <Image
+                src="/home/icon_arobase_nom_de_compte_instagram.svg"
+                alt="icon d'un arobase pour représenter le nom de compte instagram"
+                width="32"
+                height="32"
+                quality={100}
+              ></Image>
+              <p>{post.username}</p>
+            </div>
           </li>
         ))}
       </ul>
     </div>
   );
 }
-// Hello still here ? hello , yes
