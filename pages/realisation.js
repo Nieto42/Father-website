@@ -1,9 +1,6 @@
 import Layout from "../components/Layout";
 import Image from "next/image";
 
-import SwiperCore, { EffectCoverflow, Autoplay } from "swiper/core";
-SwiperCore.use([EffectCoverflow, Autoplay]);
-
 export default function realisation() {
   return (
     <Layout page="Réalisation">
@@ -13,28 +10,6 @@ export default function realisation() {
           <h2>Container amenagement</h2>
           <div className="image-carousel">
             Nos travaux en photo et video
-            <Swiper
-              slidesPerView={"auto"}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-              }}
-              centeredSlides={true}
-              effect={"coverflow"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              className="container-insta"
-            >
-              <SwiperSlide></SwiperSlide>
-            </Swiper>
             <Image
               src="/home/partner/logo-action-sociale.svg"
               alt="logo de action sociale a saint laurent du maroni"
