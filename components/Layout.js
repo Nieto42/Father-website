@@ -27,8 +27,10 @@ export default function Layout({ children, page }) {
           </Link>
 
           <div className="contact">
-            <span>0694 00 00 93</span>
-            <button>Appeller 📞</button>
+            <a href="tel:0694003393">
+              <span>0694 00 00 93</span>
+              <button>Appeller 📞</button>
+            </a>
           </div>
         </div>
       </header>
@@ -122,7 +124,7 @@ export default function Layout({ children, page }) {
           <ul>
             <li>
               <CopyToClipboard text="0783098593">
-                <span>0783098593</span>
+                <span>06 94 00 33 93</span>
               </CopyToClipboard>
             </li>
             <li>
@@ -130,9 +132,11 @@ export default function Layout({ children, page }) {
                 <span>neto1@hotmail.fr</span>
               </CopyToClipboard>
             </li>
-            <li>7 allée des allibibi, Saint Laurent Du maroni</li>
+            <li>5 All des BELIMBI, Saint Laurent Du Maroni</li>
           </ul>
-          <button>Contactez-nous 📞</button>
+          <a href="tel:0694003393">
+            <button>Contactez-nous 📞</button>
+          </a>
         </div>
       </footer>
     </div>

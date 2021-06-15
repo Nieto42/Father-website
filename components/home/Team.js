@@ -28,14 +28,30 @@ export default function Team() {
             ></Image>
           </div>
           <div className="description">
+            <h5>Neto Pompeu</h5>
+            <p>FullStack </p>
+          </div>
+        </div>
+        <div className="container-item">
+          <div className="imgi">
+            <Image
+              src="/photo/freitas.jpg"
+              alt="Photo d'un artisan guyanais"
+              width="300"
+              height="300"
+              quality={100}
+              objectFit="cover"
+            ></Image>
+          </div>
+          <div className="description">
             <h5>Freitas Soares</h5>
-            <p>Electricien</p>
+            <p>CEO & Maçon</p>
           </div>
         </div>
         <div className="container-item">
           <div className="imgi">
             <Image
-              src="/photo/name.jpeg"
+              src="/photo/siba.jpg"
               alt="Photo d'un artisan guyanais"
               width="300"
               height="300"
@@ -44,24 +60,8 @@ export default function Team() {
             ></Image>
           </div>
           <div className="description">
-            <h5>Siba</h5>
-            <p>Electricien</p>
-          </div>
-        </div>
-        <div className="container-item">
-          <div className="imgi">
-            <Image
-              src="/photo/name.jpeg"
-              alt="Photo d'un artisan guyanais"
-              width="300"
-              height="300"
-              quality={100}
-              objectFit="cover"
-            ></Image>
-          </div>
-          <div className="description">
-            <h5>Louis</h5>
-            <p>Electricien</p>
+            <h5>Siba Da Costa</h5>
+            <p>Plombier</p>
           </div>
         </div>
       </div>
