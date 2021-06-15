@@ -1,0 +1,17 @@
+.partner {
+  text-align: center;
+  .image-partner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .image {
+    margin: 2rem;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+    }
+  }
+}

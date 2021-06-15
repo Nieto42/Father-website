@@ -8,6 +8,9 @@ export default function Layout({ children, page }) {
     <div className="layout">
       <Head>
         <title>{page}</title>
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <header className="header">
@@ -22,6 +25,7 @@ export default function Layout({ children, page }) {
               quality={100}
             ></Image>
           </Link>
+
           <div className="contact">
             <span>0694 00 00 93</span>
             <button>Appeller 📞</button>

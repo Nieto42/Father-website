@@ -35,7 +35,7 @@ export default function Services() {
         </div>
         <div className="container-item">
           <Image
-            src="/home/Illustration_demolition_du_mur.svg"
+            src="/home/illustration_demolition_du_mur.svg"
             alt="illustration d'une démolition d'un mur"
             width="56"
             height="56"

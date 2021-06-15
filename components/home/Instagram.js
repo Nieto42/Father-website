@@ -18,7 +18,7 @@ export default function Instagram({ result }) {
   //   return dateAsText;
 
   // };
-
+  console.log(result);
   const formatDate = (text, format) => {
     return moment(new Date(text)).format(format); // Biblitheque de Moment.js
   };
@@ -67,7 +67,13 @@ export default function Instagram({ result }) {
               </p>
             </div>
             <div className="item-photo">
-              <a
+              <iframe
+                width="320"
+                height="460"
+                src={post.permalink + "embed"}
+                frameborder="0"
+              ></iframe>
+              {/* <a
                 href={post.permalink}
                 target="_blank"
                 rel="noreferrer noopener"
@@ -90,19 +96,9 @@ export default function Instagram({ result }) {
                     width="100%"
                   ></video>
                 )}
-              </a>
+              </a> */}
             </div>
             <div className="item-caption">{post.caption}</div>
-            <div className="item-username">
-              <Image
-                src="/home/icon_arobase_nom_de_compte_instagram.svg"
-                alt="icon d'un arobase pour représenter le nom de compte instagram"
-                width="32"
-                height="32"
-                quality={100}
-              ></Image>
-              <p>{post.username}</p>
-            </div>
           </SwiperSlide>
         ))}
       </Swiper>

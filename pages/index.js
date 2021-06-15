@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import Services from "../components/home/Services";
 import Team from "../components/home/Team";
+import Partner from "../components/home/Partner";
 import Instagram, { CarrocelContainer } from "../components/home/Instagram";
 
 export default function Home({ result }) {
@@ -34,16 +35,31 @@ export default function Home({ result }) {
           <Team></Team>
         </div>
         <div className="Google-container"></div>
-        <div className="partner-container"></div>
+        <div className="partner-container">
+          <Partner></Partner>
+        </div>
       </div>
     </Layout>
   );
 }
 
 export async function getServerSideProps(context) {
+  const token =
+    "IGQVJYd1VaSFJpcnFkT1M5MkV1ZAHNTWTZAmYWFPRGh5NllEUTdOQzJDaEZAmLU9ZAMkFnSXJySEZAIRjcyWnNEOVZAIdFNtM2IycmxyN29lQ3NjUS12dDF4MXZApcF9yWHZArbmx5ZAlhRUTRBS1ZATTUMtNWpOYQZDZD";
+  const fields = [
+    "caption",
+    "children{media_type,media_url,thumbnail_url}",
+    "id",
+    "media_type",
+    "media_url",
+    "permalink",
+    "thumbnail_url",
+    "timestamp",
+  ].join(",");
+
   try {
     const data = await fetch(
-      `https://graph.instagram.com/me/media?fields=id,username,media_url,media_type,permalink,thumbail_url,caption,timestamp&access_token=IGQVJXZA0xxU0ZAURjlQUndpajdIX1lHd3VVREg2RjRjeEt5MlJaZAEwtYUpDajI3RmloNGlDMHhocjR3OFZAua2R1ZAk8tRmRxRmRtRC1sSndoZA2dvbWpkNlBsMV96RTI5V3FBS1I3TmptV3Q4YWhLYmhMWgZDZD`
+      `https://graph.instagram.com/me/media?fields=${fields}&access_token=${token}`
     );
     const result = await data.json();
     console.log(result);
